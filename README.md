@@ -7,6 +7,14 @@ Like the PSM itself, this dashboard is [open source](LICENSE) software.
 Much of this depends on the [PSM requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements]),
 so take a look there if you're missing context for things here.
 
+* `get-reqs`
+   Script to orchestrate fetching and parsing requirements.
+   Really just a demo right now; more coming soon.
+
+* `psm-reqs.el`, `psm_reqs.py`, `reqs2any`, `show-reqs`
+   All imported from psm/requirements/ (as of commit a0e43014e, though
+   really commit 5259343ebedf is the most recent relevant one).
+
 * `get-inputs`
   Script that gathers data from various PSM project sources
   (high-level features list, requirements list, issue tracker) and

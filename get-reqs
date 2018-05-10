@@ -1,0 +1,11 @@
+#!/bin/sh
+
+REQS_DIR=${OTSDIR}/clients/hhs/cms/psm/r/psm/requirements
+
+# TODO: check and recommend 'pip3 install xlsx2csv' if needed.
+# (https://github.com/dilshod/xlsx2csv)
+/usr/bin/xlsx2csv -s 0 ${REQS_DIR}/RTM.xlsx > rtm.csv
+
+csplit -f "rtm-" --silent -- rtm.csv "/^-------- /" "{*}"
+
+./reqs2any --output=human rtm.csv
