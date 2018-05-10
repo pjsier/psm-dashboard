@@ -11,7 +11,11 @@ so take a look there if you're missing context for things here.
    Script to orchestrate fetching and parsing requirements.
    Really just a demo right now; more coming soon.
 
-* `psm-reqs.el`, `psm_reqs.py`, `reqs2any`, `show-reqs`
+* `reqs2any`
+   Parse requirements from CSV and display them in various ways.
+   (This code will get re-shaped to work with 'get-inputs' soon.)
+
+* `psm-reqs.el`, `psm_reqs.py`, `show-reqs`
    All imported from psm/requirements/ (as of commit a0e43014e, though
    really commit 5259343ebedf is the most recent relevant one).
 
