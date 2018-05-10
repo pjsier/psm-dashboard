@@ -3,7 +3,11 @@
 REQS_DIR=${OTSDIR}/clients/hhs/cms/psm/r/psm/requirements
 
 # TODO: check and recommend 'pip3 install xlsx2csv' if needed.
-# (https://github.com/dilshod/xlsx2csv)
+# It's https://github.com/dilshod/xlsx2csv.  Other choices are
+# github.com/staale/py-xlsx, github.com/leegao/pyXLSX, and
+# https://bitbucket.org/ericgazoni/openpyxl/ (though BitBucket is
+# apparently now requiring login to access even public projects,
+# so usec lone https://github.com/ericgazoni/openpyxl instead).
 /usr/bin/xlsx2csv -s 0 ${REQS_DIR}/RTM.xlsx > rtm.csv
 
 csplit -f "rtm-" --silent -- rtm.csv "/^-------- /" "{*}"
